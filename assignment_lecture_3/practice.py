@@ -156,5 +156,30 @@ given a list of tuple with info(name , subject):
 *create dictionary (student, set of courses)
 '''
 
+info=[("alice","math"),
+      ("ayush","science"),
+      ("ajay","science"),
+      ("neha","english"),
+      ("kriti","english"),
+      ("vidhi","hindi")
+      ]
 
+# unique_course = set()
+# for tup in info:
+#     unique_course.add(tup[1])
+# print(unique_course)
+
+#list students enrolled in english
+# students = set()
+# for tup in info:
+#     if tup[1] == "english":
+#       students.add(tup[0])
+# print(students)  
+    
+# create dictionary (student, set of courses)
+
+students = {
+   "name": ["ayush","ajay","neha","kriti","vidhi","alice"], 
+   "courses":{"math","english","science","hindi"}
+    }
 
