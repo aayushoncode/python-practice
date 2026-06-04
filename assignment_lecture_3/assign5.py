@@ -1,15 +1,15 @@
 '''
-Q crate a dictionary where :
-* keys = student names 
-* values = marks (integer)
-write a menu based program where user passes a key (A,B,C,D)
-depending on the operation they want to perform on the dictionary : 
+# Q crate a dictionary where :
+# * keys = student names 
+# * values = marks (integer)
+# write a menu based program where user passes a key (A,B,C,D)
+# depending on the operation they want to perform on the dictionary : 
  
-1. A - add a student 
-2. B - update marks 
-3. C - search for a student 
-4. D - display all students and marks
-'''
+# 1. A - add a student 
+# 2. B - update marks 
+# 3. C - search for a student 
+# 4. D - display all students and marks
+# '''
 
 
 students ={
@@ -23,18 +23,19 @@ students ={
 
 # print(students.)
 
-for j in students :
-    if j == "ayush":
-        students["ayush"] = 90
-        print(students)
+# for j in students :
+#     if j == "ayush":
+#         students["ayush"] = 90
+#         print(students)
 
 
-print(students.get("ayush"))
+# print(students.get("ayush"))
 
 menu = ["1. A - add a student", 
 "2. B - update marks", 
 "3. C - search for a student", 
-"4. D - display all students and marks"]
+"4. D - display all students and marks",
+"enter exit to get out of the program"]
 
 print("the students are : ",students)
 

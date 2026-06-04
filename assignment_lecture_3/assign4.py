@@ -1,6 +1,6 @@
 # Given a tuple of integers, create:
-#•A tuple of all even numbers 
-#•A tuple of all odd numbers
+# •A tuple of all even numbers 
+# •A tuple of all odd numbers
 
 
 given_tuple = (1,2,3,4,5,6)

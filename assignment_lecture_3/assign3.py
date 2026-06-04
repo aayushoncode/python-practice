@@ -25,9 +25,9 @@
 
 
 
-user_input_list1=[int(x) for x in input("enter the first list : ").split()]
-user_input_list2=[int(x) for x in input("enter the second list : ").split()]
+# user_input_list1=[int(x) for x in input("enter the first list : ").split()]
+# user_input_list2=[int(x) for x in input("enter the second list : ").split()]
 
-combine_sorted_list = sorted(user_input_list1 + user_input_list2)
+# combine_sorted_list = sorted(user_input_list1 + user_input_list2)
 
-print(combine_sorted_list)
+# print(combine_sorted_list)
