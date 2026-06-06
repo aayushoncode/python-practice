@@ -60,6 +60,97 @@
 #     def calc_price(price):
 
 
+# class students :
+#     subject = "science"
+#     course = "bca"
+#     year = "3rd"
+
+# stu1 = students()
+# print(f"course : {stu1.course}\nsubject : {stu1.subject}\nyear = {stu1.year}")
 
 
 
+
+# class students :
+#     college_name = "shri shankaracharya professional university"
+#     def __init__(self,name):
+#         self.name = name
+
+
+# stu1 = students("ayush")
+# stu2 = students("ridhi")
+# stu3 = students("ayushi")
+
+# print(stu1.name)
+# print(stu2.name)
+# print(stu3.name)
+
+
+
+
+# class laptop :
+#     laptop_name = "asus"
+#     laptop_storage = "ssd"
+
+#     def __init__(self,RAM,STORAGE):
+#         self.RAM = RAM
+#         self.STORAGE = STORAGE
+
+# L1 = laptop("16GB ","512GB")
+
+# print(f"laptop name : {laptop.laptop_name} \nram : {L1.RAM} \nstorage : {L1.STORAGE} {laptop.laptop_storage}")
+
+
+
+
+
+
+# class company :
+#     company_name = "AK production"
+
+#     def __init__(self,emp_name,emp_designation,emp_id,emp_salary):
+#         self.emp_name = emp_name
+#         self.emp_designation = emp_designation
+#         self.emp_id = emp_id
+#         self.emp_salary = emp_salary
+#     @classmethod
+#     def get_company_name(cls):
+#         return f"company name : {cls.company_name}"
+#     def get_info(self): #instance method 
+#         return f"\nemployee name : {self.emp_name}\nemployee designation : {self.emp_designation}\nemployee id : {self.emp_id}\nemployee salary : {self.emp_salary}"
+
+
+# emp1= company("ayush", "software engineer", "001", "35lpa")
+
+# print(company.get_company_name(), emp1.get_info())
+
+
+
+"""
+design and create an online store for products (name , price ).
+track total products being created. 
+create a static method to calculate discount on each product based on a % paramenter
+
+"""
+
+
+class online_store :
+
+    def __init__(self,name,price):
+        self.name = name 
+        self.price = price
+
+    @staticmethod
+    def calc_discount(price, discount):
+        return price - (discount *(price/100))
+         
+    
+    def get_info(self):
+        fp = online_store.calc_discount(self.price,10)
+        return f"product name : {self.name}\nproduct price : {self.price}\nprice after discount : {fp} "
+
+
+
+p1 = online_store("samsung s22 ultra", 50_000)
+
+print(p1.get_info())
