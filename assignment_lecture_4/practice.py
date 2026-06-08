@@ -159,36 +159,91 @@ create a static method to calculate discount on each product based on a % parame
 
 
 
-class product :
-    product_name = "super_bike"
-    count = 0
+# class product :
+#     product_name = "super_bike"
+#     count = 0
 
-    def __init__(self,name,engine,price):
-        self.name = name
-        self.engine = engine
-        self.price = price
-        product.count+=1
-
-    
-    @staticmethod
-    def calc_discount (price) :
-        return int(price - (10 * (price/100)))
-    
-    def get_info(self):
-        return f"bike : {product.product_name}\nname : {self.name}\nengine : {self.engine}\nprice : {self.price}\nprice after 10% discount : {self.calc_discount(self.price)}"
-    
-    @classmethod
-    def product_count(cls):
-        return f"the no. of products are : {cls.count}"
+#     def __init__(self,name,engine,price):
+#         self.name = name
+#         self.engine = engine
+#         self.price = price
+#         product.count+=1
 
     
+#     @staticmethod
+#     def calc_discount (price,discount) :
+#         fp =  int(price - (discount * (price/100)))
+#         return f"price : {price} price after {discount}% discount : {fp}"
+#     def get_info(self):
+#         return f"bike : {product.product_name}\nname : {self.name}\nengine : {self.engine}"
+    
+#     @classmethod
+#     def product_count(cls):
+#         return f"the no. of products are : {cls.count}"
 
-b1 = product("GT","650cc",5_00000)
-b2 = product("royal enfield classic","350cc",2_44000)
-b3 = product("royal enfield standard","350cc",2_06000)
+    
+
+# b1 = product("GT","650cc",5_00000)
+# b2 = product("royal enfield classic","350cc",2_44000)
+# b3 = product("royal enfield standard","350cc",2_06000)
 
 
-print(b1.get_info())
-print(b2.get_info())
-print(b3.get_info())
-print(product.product_count())
+# print(b1.get_info())
+# print(b1.calc_discount(b1.price,12))
+# print(b2.get_info())
+# print(b2.calc_discount(b2.price,10))
+# print(b3.get_info())
+# print(product.product_count())
+
+
+
+
+
+
+
+
+
+
+
+
+
+# class BankAccount :
+#     def __init__(self,name,balance):
+#         self.name = name  # public attribute
+#         self.__balance = balance # private attribute
+
+
+#     def get_balance(self): #getter
+#        return self.__balance
+    
+#     def set_balance(self, newBalance):  #setter
+#         self.__balance = newBalance
+
+
+# acc1 = BankAccount("ayush kumar sinha",100_000)
+
+# acc1.set_balance(300_000)
+# print( acc1.name,acc1._BankAccount__balance)
+        
+
+
+# inheritance 
+
+class employee :
+    start_time = "10am"
+    end_time = "6pm"
+
+    def change_time(self,new_end_Time):
+        self.end_time = new_end_Time
+class teacher(employee):
+    def __init__(self,name):
+        self.name = name 
+
+
+
+
+
+t1 = teacher("ayush kumar sinha")
+
+t1.change_time("7pm")
+print(t1.name, t1.start_time, t1.end_time,)
