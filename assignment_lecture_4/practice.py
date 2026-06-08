@@ -134,23 +134,61 @@ create a static method to calculate discount on each product based on a % parame
 """
 
 
-class online_store :
+# class online_store :
 
-    def __init__(self,name,price):
-        self.name = name 
-        self.price = price
+#     def __init__(self,name,price):
+#         self.name = name 
+#         self.price = price
 
-    @staticmethod
-    def calc_discount(price, discount):
-        return price - (discount *(price/100))
+#     @staticmethod
+#     def calc_discount(price, discount):
+#         return price - (discount *(price/100))
          
     
+#     def get_info(self):
+#         fp = online_store.calc_discount(self.price,10)
+#         return f"product name : {self.name}\nproduct price : {self.price}\nprice after discount : {fp} "
+
+
+
+# p1 = online_store("samsung s22 ultra", 50_000)
+
+# print(p1.get_info())
+
+
+
+
+
+class product :
+    product_name = "super_bike"
+    count = 0
+
+    def __init__(self,name,engine,price):
+        self.name = name
+        self.engine = engine
+        self.price = price
+        product.count+=1
+
+    
+    @staticmethod
+    def calc_discount (price) :
+        return int(price - (10 * (price/100)))
+    
     def get_info(self):
-        fp = online_store.calc_discount(self.price,10)
-        return f"product name : {self.name}\nproduct price : {self.price}\nprice after discount : {fp} "
+        return f"bike : {product.product_name}\nname : {self.name}\nengine : {self.engine}\nprice : {self.price}\nprice after 10% discount : {self.calc_discount(self.price)}"
+    
+    @classmethod
+    def product_count(cls):
+        return f"the no. of products are : {cls.count}"
+
+    
+
+b1 = product("GT","650cc",5_00000)
+b2 = product("royal enfield classic","350cc",2_44000)
+b3 = product("royal enfield standard","350cc",2_06000)
 
 
-
-p1 = online_store("samsung s22 ultra", 50_000)
-
-print(p1.get_info())
+print(b1.get_info())
+print(b2.get_info())
+print(b3.get_info())
+print(product.product_count())
